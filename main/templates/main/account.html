@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <div class="col s12 m6 l4">
+        <a href="{{ p.post_slug }}">
+            <div class="card hoverable white">
+                <div class="card-content black-text">
+                    <span class="card-title">You joined</span>
+                    <p>{{ user.date_joined }}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endblock %}

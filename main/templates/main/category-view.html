@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <h4>All {{ current_category.category_title }}</h4>
+    <div class="row">
+        {% for p in posts %}
+            <div class="col s12 m6 l4">
+                <a href="{{ p.post_slug }}">
+                    <div class="card hoverable white">
+                        <div class="card-content black-text">
+                            <span class="card-title">{{ p.post_title }}</span>
+                            <p>{{ p.post_date }}</p>
+                            <!-- <p>{{ p.post_content|safe }}</p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+        <p>{{ p.post_title }}</p>
+        <p>{{ p.post_date }}</p>
+        <p>{{ p.post_content|safe }}</p>
+{% endblock %}

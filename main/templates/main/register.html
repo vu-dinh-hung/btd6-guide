@@ -1,0 +1,12 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <form method=POST>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn waves-effect waves-light" type="submit">Submit</button>
+    </form>
+    <em>Note that I have not added functionalities for accounts, e.g. posting comments. You can still log in/out and see the join date in your account page.</em>
+    <br><br>
+    <strong>If you already have an account, <a href="/login">login</a> instead.</strong>
+{% endblock %}

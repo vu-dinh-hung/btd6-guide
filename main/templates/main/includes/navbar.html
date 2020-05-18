@@ -1,0 +1,18 @@
+<nav>
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">BTD6 Guides</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/guides">Guides</a></li>
+                <li><a href="/towers">Towers</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/account">{{ user.username }}</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                {% else %}
+                    <li><a href="/login">Log In/Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
