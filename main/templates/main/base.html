@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="{% static 'tinymce/css/prism.css' %}">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="{% static 'main/css/materialize.css' %}">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <!-- icon css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     {% block title %}
     {% endblock %}
 </home>
@@ -15,12 +15,22 @@
 <body>
     {% include "main/includes/navbar.html" %}
     {% include "main/includes/toast.html" %}
-
+    
     <div class="container">
         <br>
         {% block content %}
         {% endblock %}
     </div>
-</body>
 
-<script src="{% static 'tinymce/js/prism.js' %}"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static 'tinymce/js/prism.js' %}"></script>
+    <!-- Script for mobile sidenav -->
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        })
+    </script>
+</body>

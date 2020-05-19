@@ -1,8 +1,11 @@
 <nav>
-    <div class="container">
-        <div class="nav-wrapper">
+    <div class="nav-wrapper">
+        <div class="container">
             <a href="/" class="brand-logo">BTD6 Guides</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
                 <li><a href="/guides">Guides</a></li>
                 <li><a href="/towers">Towers</a></li>
@@ -16,3 +19,15 @@
         </div>
     </div>
 </nav>
+
+<ul class="sidenav" id="mobile-menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/guides">Guides</a></li>
+    <li><a href="/towers">Towers</a></li>
+    {% if user.is_authenticated %}
+        <li><a href="/account">{{ user.username }}</a></li>
+        <li><a href="/logout">Log Out</a></li>
+    {% else %}
+        <li><a href="/login">Log In/Register</a></li>
+    {% endif %}
+</ul>
