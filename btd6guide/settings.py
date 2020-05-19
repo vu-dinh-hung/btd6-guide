@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$faw0tct8_j=v&vm#r+x$1pf2y160#zja_+2knta77w1r_e=ax'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.btd6guide.com']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
@@ -148,3 +148,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/vudinhhung/btd6guide/static'
