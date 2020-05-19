@@ -1,5 +1,9 @@
 {% extends "main/base.html" %}
 
+{% block title %}
+    <title>{{current_category.category_title}} - BTD6 Guide</title>
+{% endblock %}
+
 {% block content %}
     <h4>All {{ current_category.category_title }}</h4>
     <div class="row">

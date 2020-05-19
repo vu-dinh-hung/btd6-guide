@@ -1,11 +1,15 @@
 {% extends "main/base.html" %}
 
+{% block title %}
+    <title>All Guides - BTD6 Guide</title>
+{% endblock %}
+
 {% block content %}
     <h4>Guide Categories</h4>
     <div class="row">
         {% for c in categories %}
             <div class="col s12 m6 l4">
-                <a href="{{ c.category_slug }}">
+                <a href="/{{ c.category_slug }}">
                     <div class="card hoverable white">
                         <div class="card-content black-text">
                             <span class="card-title">{{ c.category_title }}</span>
