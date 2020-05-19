@@ -25,7 +25,7 @@ SECRET_KEY = '$faw0tct8_j=v&vm#r+x$1pf2y160#zja_+2knta77w1r_e=ax'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.btd6guide.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.btd6guide.com']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
